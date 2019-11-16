@@ -31,20 +31,20 @@
       wheel.spin(function(member) {
         alert(member);
         if(member == ('두더지잡기')){
-          window.open("../두더지잡기/index.html");
-          self.close();
+          location.href="../두더지잡기/index.html";
+
         }
         else if( member == ('벽돌깨기')){
-          window.open("../벽돌깨기/break.html");
-          self.close();
+          location.href="../벽돌깨기/index.html";
+
         }
         else if(member == ('스네이크게임')){
-          window.open("../스네이크/index.html");
-          self.close();
+          location.href="../스네이크/index.html";
+
         }
         else{
-          window.open("../짝맞추기/index.html");
-          self.close();
+          location.href="../짝맞추기/index.html";
+
         }
       });
   }, false);
