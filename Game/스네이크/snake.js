@@ -25,6 +25,7 @@ let up = new Audio();
 let right = new Audio();
 let left = new Audio();
 let down = new Audio();
+let result = 0;
 
 dead.src = "audio/dead.mp3";
 eat.src = "audio/eat.mp3";
@@ -89,29 +90,29 @@ function collision(head,array){
 // draw everything to the canvas
 
 function draw(){
-    
+
     ctx.drawImage(ground,0,0);
-    
+
     for( let i = 0; i < snake.length ; i++){
         ctx.fillStyle = ( i == 0 )? "green" : "white";
         ctx.fillRect(snake[i].x,snake[i].y,box,box);
-        
+
         ctx.strokeStyle = "red";
         ctx.strokeRect(snake[i].x,snake[i].y,box,box);
     }
-    
+
     ctx.drawImage(foodImg, food.x, food.y);
-    
+
     // old head position
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
-    
+
     // which direction
     if( d == "LEFT") snakeX -= box;
     if( d == "UP") snakeY -= box;
     if( d == "RIGHT") snakeX += box;
     if( d == "DOWN") snakeY += box;
-    
+
     // if the snake eats the food
     if(snakeX == food.x && snakeY == food.y){
         score++;
@@ -125,46 +126,35 @@ function draw(){
         // remove the tail
         snake.pop();
     }
-    
+
     // add new Head
-    
+
     let newHead = {
         x : snakeX,
         y : snakeY
     }
-    
+
     // game over
-    
+
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
-        clearInterval(game);
-        dead.play();
+        result = 0;
+        setTimeout(() => (alert("Fail")),50);
+        setTimeout(() => (self.close()),50);
     }
-    
+
+
     snake.unshift(newHead);
-    
+
     ctx.fillStyle = "white";
     ctx.font = "45px Changa one";
     ctx.fillText(score,2*box,1.6*box);
+    if(snake.length > 10){
+      result = 1;
+      setTimeout(() => (alert("Pass")), 100);
+      setTimeout(() => (self.close()), 100);
+    }
 }
 
 // call draw function every 100 ms
 
 let game = setInterval(draw,100);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

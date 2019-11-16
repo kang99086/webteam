@@ -43,6 +43,7 @@
     var score = 0;
     var lives = 3;
     var bricks = [];
+    var result = 0;
     for(c=0; c<brickColumnCount; c++){
       bricks[c] = [];
       for(r=0; r<brickRowCount; r++){
@@ -93,8 +94,9 @@
               b.status = 0;
               score++;
               if(score == brickRowCount*brickColumnCount) {
-                alert("YOU WIN, CONGRATULATIONS!");
-                document.location.reload();
+                alert("Pass!");
+                result = 1;
+                self.close();
               }
             }
           }
@@ -165,8 +167,9 @@
             lives--;
             if(!lives){
               clearInterval(intervalId);
-              alert("GAME OVER");
-              document.location.reload();
+              alert("Fail");
+              result = 0;
+              self.close();
             }
             else {
               x = canvas.width/2;
