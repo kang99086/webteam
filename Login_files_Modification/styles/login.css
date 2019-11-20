@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, fieldset, form, label, legend, table, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  background-color: #f2f2f2;
+  font: 300 17px 'Roboto', sans-serif;
+  /* background-image: url("../bonobono.jpg");
+  background-size: 100px 100px;
+  animation: spin 0.5s linear infinite; */
+}
+
+/* @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } */
+
+#wrap {
+  /* float: left; */
+  width: 400px;
+  height: 325px;
+  background-color: #0099cf;
+  margin: 150px auto 100px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: gray 0 3px 7px;
+}
+
+header {
+  width: 400px;
+  height: 130px;
+}
+
+header h1 {
+  font: 300 60px 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  line-height: 130px;
+  text-shadow: 0 0 7px #92ceec;
+}
+
+#error {
+  border: 1px solid #ffa9a8;
+  font: 300 25px 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -200px;
+  border-radius: 0 0 3px 3px;
+  background-color: #ff6a69;
+  /*white;*/
+  color: white;
+  /* #ff6a69; */
+  outline: none;
+  border-top: none;
+  box-shadow: gray 0 3px 7px;
+  /*     display:none; */
+}
+
+.hidden {
+  display: none;
+}
+
+content form {
+  width: 400px;
+  height: 170px;
+  position: relative;
+}
+
+.textfield {
+  position: absolute;
+  left: 25px;
+  width: 295px;
+  height: 60px;
+  padding-left: 55px;
+  margin: 0;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  color: #9d9d9d;
+  font-weight: 100;
+}
+
+input[type="text"] {
+  top: 0px;
+}
+
+input[type="password"] {
+  bottom: 25px;
+}
+
+.textfield:focus, .textfield:hover {
+  background-color: white;
+  border: none;
+  outline: none;
+  color: #5f5f5f;
+}
+
+/* icon */
+.login_icon {
+  position: absolute;
+  left: 25px;
+  width: 50px;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 3px 0 0 3px;
+  z-index: 20;
+}
+
+#usericon {
+  top: 0px;
+  background: url("../img/user_icon.png") center no-repeat #f2f2f2;
+}
+
+#passwdicon {
+  bottom: 25px;
+  background: url("../img/passwd_icon.png") center no-repeat #f2f2f2;
+}
+
+.textfield:focus+#usericon {
+  left: 10px;
+  background: url("../img/user_icon_focus.png") center no-repeat #79bfdc;
+}
+
+.textfield:focus+#passwdicon {
+  left: 10px;
+  background: url("../img/passwd_icon_focus.png") center no-repeat #79bfdc;
+}
+
+#submit_button {
+  position: absolute;
+  bottom: 25px;
+  left: 315px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: url("img/login_button.png") center no-repeat white;
+  border-radius: 0 3px 3px 0;
+  text-indent: -99999px;
+}
+
+#submit_button:hover {
+  background: url("img/login_button_hover.png") center no-repeat #ffbbbe;
+}
+
+/* animation  */
+content form input, .login_icon {
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 7px #92ceec;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#register {
+  position: relative;
+  margin: 0px auto;
+  height: 25px;
+  background-color: #92ceec;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#register ul li {
+  font-size: 12pt;
+  font-weight: 400;
+  list-style: none;
+  line-height: 23px;
+}
+
+#join {
+  padding: 0px 5px;
+  float: right;
+}
+
+#informSearch {
+  padding: 0px 5px;
+  color: white;
+  text-shadow: 0 0 7px #92ceec;
+  float: left;
+}
