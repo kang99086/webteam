@@ -12,7 +12,11 @@
 	foreach($login_stt as $lo){
 			if(password_verify($pw,$lo['pw']) and $lo['id']==$id){
 				$_SESSION['id']=$_POST['id'];
-				echo "<script>location.href='../index.html';</script>";
+				echo
+				"<script>
+					window.alert('로그인 되었습니다.');
+					location.href='../index.html';
+				</script>";
 			}
 			else{
 				echo

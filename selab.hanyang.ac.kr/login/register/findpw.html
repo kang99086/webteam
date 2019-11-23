@@ -9,35 +9,38 @@
 
 <body>
   <div id="container">
-    
+
     <div>
       <header>
         <h1 id="findPwHead">Find password</h1>
       </header>
     </div>
-    <form id="findPwForm" action="index.html" method="post">
+    <form id="findPwForm" action="findpw.php" method="post">
 
 
       <div id="findPwWrap">
         <div id="">
-          <input type="text" name="pw" placeholder="Student ID">
+          <input type="text" name="id" placeholder="Student ID">
         </div>
 
         <div class="selClass">
           <h1 class="selHead">Security Question</h1>
           <div clas>
             <span class="selWrap">
-              <select class="sel" name="selectedQustion">
+              <select class="sel" name="selectedQuestion">
                 <option value="1">처음 배운 요리는 무엇입니까?</option>
                 <option value="2">꿈의 직업은 무엇입니까?</option>
                 <option value="3">어린 시절은 보낸 동네 이름은 무엇입니까?</option>
                 <option value="4">가장 좋아하는 가수의 이름은 무엇입니까?</option>
               </select>
             </span>
+              <div id="selAns">
+                <label> <input type="text" name="ans" placeholder="Your own ans"></label>
+              </div>
           </div>
 
           <div class="">
-            <button type="button" name="button">Find!</button>
+            <button type="submit" name="button">Find!</button>
           </div>
         </div>
 

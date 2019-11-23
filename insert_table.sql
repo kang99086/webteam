@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS students;
 DROP TABLE IF EXIsts attendance_check;
+DROP TABLE IF EXISTS students;
 
 CREATE TABLE students(
   id  INT NOT NULL,
