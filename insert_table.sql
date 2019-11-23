@@ -13,7 +13,7 @@ CREATE TABLE students(
 );
 
 CREATE TABLE attendance_check (
-  attendance_date DATE  NOT NULL,
+  attendance_date DATE  NOT NULL DEFAULT current_date,
   student_id  INT NOT NULL,
   attendance_time TIMESTAMP NOT NULL  DEFAULT current_timestamp,
   attance INT NOT NULL  DEFAULT 0,
