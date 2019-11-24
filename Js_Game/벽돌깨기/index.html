@@ -96,7 +96,7 @@
               if(score == brickRowCount*brickColumnCount) {
                 alert("Pass!");
                 result = 1;
-                self.close();
+                location.href=("../roulette/index.html");
               }
             }
           }
@@ -169,7 +169,7 @@
               clearInterval(intervalId);
               alert("Fail");
               result = 0;
-              self.close();
+              location.href=("../roulette/index.html");
             }
             else {
               x = canvas.width/2;

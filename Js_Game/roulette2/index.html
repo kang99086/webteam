@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/rouletteWheel.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var itemsToShow = 38;
+			var wheel = ["두더지잡기","벽돌깨기","스네이크게임","카드짝맞추기"];
+			var items = {};
+			for(var i=0; i < itemsToShow; i++){
+				items[i] = wheel[i]
+			}
+		  $('#canvas').rouletteWheel({
+		    items : items,
+		    selected : function(key, value){
+		      alert(value);
+					if(value == ('두더지잡기')){
+	        	location.href=("../두더지잡기/index.html");
+
+	        }
+	        else if( value == ('벽돌깨기')){
+	        	location.href=("../벽돌깨기/index.html");
+
+	        }
+	        else if(value == ('스네이크게임')){
+	        	location.href=("../스네이크/index.html");
+
+	        }
+	        else{
+	        	location.href=("../짝맞추기/index.html");
+
+	        }
+		    },
+		    spinText : 'Click Me',
+		  });
+
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+
+	<canvas id="canvas" width="800" height="800"></canvas>
+
+</body>
+</html>

@@ -37,9 +37,11 @@ function check(){
   if(score > 9){
     result = 1;
     alert("Pass");
+    location.href=("../roulette/index.html");
   }else{
     result - 1;
     alert("Fail");
+    location.href=("../roulette/index.html");
   }
 }
 

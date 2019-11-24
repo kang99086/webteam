@@ -139,7 +139,8 @@ function draw(){
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         result = 0;
         setTimeout(() => (alert("Fail")),50);
-        setTimeout(() => (self.close()),50);
+        setTimeout(() => (location.href=("../roulette/index.html")),100);
+        // setTimeout(() => (self.close()),100);
     }
 
 
@@ -150,8 +151,9 @@ function draw(){
     ctx.fillText(score,2*box,1.6*box);
     if(snake.length > 10){
       result = 1;
-      setTimeout(() => (alert("Pass")), 100);
-      setTimeout(() => (self.close()), 100);
+      setTimeout(() => (alert("Pass")), 50);
+      setTimeout(() => (location.href=("../roulette/index.html")),100);
+      // setTimeout(() => (self.close()),100);
     }
 }
 

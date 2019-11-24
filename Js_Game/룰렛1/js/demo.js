@@ -31,19 +31,19 @@
       wheel.spin(function(member) {
         alert(member);
         if(member == ('두더지잡기')){
-          location.href="../두더지잡기/index.html";
+          window.open("../두더지잡기/index.html");
 
         }
         else if( member == ('벽돌깨기')){
-          location.href="../벽돌깨기/index.html";
+          window.openm("../벽돌깨기/index.html");
 
         }
         else if(member == ('스네이크게임')){
-          location.href="../스네이크/index.html";
+          window.open("../스네이크/index.html");
 
         }
         else{
-          location.href="../짝맞추기/index.html";
+          window.open("../짝맞추기/index.html");
 
         }
       });
