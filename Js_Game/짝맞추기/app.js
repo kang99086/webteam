@@ -3,7 +3,7 @@ var imageCards = [],
     selectedImages = [],
     waitTime = 500,
     statusArea;
-    timeset = 10;
+    timeset = 60;
     checking = 0;
     result = 0;
 
@@ -92,15 +92,17 @@ function checkIt() {
 window.onload = initialize;
 setInterval(function(){
     statusArea.innerText = timeset + "minutes";
-    timeset--;
-    if(timeset <-1){
+    if(timeset <1){
       result = 0;
-      alert("Fail");
-      location.href=("../roulette/index.html");
+      setTimeout(() => (alert("Fail")),50);
+      setTimeout(() => (location.href=("../roulette/index.html")),50);
+
+    }else{
+      timeset--;
     }
     if(checking == 10){
       result = 1;
-      alert("Pass");
-      location.href=("../roulette/index.html");
+      setTimeout(() => (alert("Fail")),50);
+      setTimeout(() => (location.href=("../roulette/index.html")),50);
     }
 },1000);

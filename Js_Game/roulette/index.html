@@ -138,19 +138,20 @@
                 // You would probably want to do something more interesting with this information.
                 alert(indicatedSegment.text);
                 if(indicatedSegment.text == ('두더지잡기')){
-      	        	location.href=("../두더지잡기/index.html");
-
+      	        	window.open("../두더지잡기/index.html","a","width = 800,height = 800 , left = 550 , top = 100");
+                  self.close();
       	        }
       	        else if(indicatedSegment.text == ('벽돌깨기')){
-      	        	location.href=("../벽돌깨기/index.html");
-
+      	        	window.open("../벽돌깨기/index.html","a","width = 700,height = 500 , left = 600, top = 100");
+                  self.close();
       	        }
       	        else if(indicatedSegment.text == ('스네이크게임')){
-      	        	location.href=("../스네이크/index.html");
-
+      	        	window.open("../스네이크/index.html","a","width = 800,height = 650, left = 550 , top = 100 ");
+                  self.close();
       	        }
       	        else{
-      	        	location.href=("../짝맞추기/index.html");
+      	        	window.open("../짝맞추기/index.html","a","width = 800,height = 700 , left = 550 , top = 100");
+                  self.close();
 
       	        }
             }

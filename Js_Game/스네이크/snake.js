@@ -151,8 +151,8 @@ function draw(){
     ctx.fillText(score,2*box,1.6*box);
     if(snake.length > 10){
       result = 1;
-      setTimeout(() => (alert("Pass")), 50);
-      setTimeout(() => (location.href=("../roulette/index.html")),100);
+      setTimeout(() => (alert("Pass")), 100);
+      setTimeout(() => (location.href=("../roulette/index.html")),120);
       // setTimeout(() => (self.close()),100);
     }
 }
