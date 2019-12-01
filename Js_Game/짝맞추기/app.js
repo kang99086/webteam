@@ -102,7 +102,7 @@ setInterval(function(){
     }
     if(checking == 10){
       result = 1;
-      setTimeout(() => (alert("Fail")),50);
+      setTimeout(() => (alert("Pass")),50);
       setTimeout(() => (location.href=("../roulette/index.html")),50);
     }
 },1000);

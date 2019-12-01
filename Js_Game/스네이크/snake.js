@@ -136,6 +136,7 @@ function draw(){
 
     // game over
 
+
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         result = 0;
         setTimeout(() => (alert("Fail")),50);
@@ -144,12 +145,13 @@ function draw(){
     }
 
 
+
     snake.unshift(newHead);
 
     ctx.fillStyle = "white";
     ctx.font = "45px Changa one";
     ctx.fillText(score,2*box,1.6*box);
-    if(snake.length > 10){
+    if(snake.length > 10 && result == 0){
       result = 1;
       setTimeout(() => (alert("Pass")), 100);
       setTimeout(() => (location.href=("../roulette/index.html")),120);
