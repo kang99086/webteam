@@ -57,17 +57,17 @@
             <br />
             <br />
             <table class="power" cellpadding="10" cellspacing="0">
-              <tr>
-                <th align="center">Power</th>
+              <tr align="center" id="pw4">
+                <th align="center">두더지잡기</th>
               </tr>
               <tr>
-                <td width="78" align="center" id="pw3" onClick="powerSelected(3);">High</td>
+                <th width="78" align="center" >벽돌깨기</th>
               </tr>
               <tr>
-                <td align="center" id="pw2" onClick="powerSelected(2);">Med</td>
+                <th align="center">스네이크게임</th>
               </tr>
               <tr>
-                <td align="center" id="pw1" onClick="powerSelected(1);">Low</td>
+                <th align="center"  >카드짝맞추기</th>
               </tr>
             </table>
             <br />
@@ -167,17 +167,13 @@
       // You would probably want to do something more interesting with this information.
       alert(indicatedSegment.text);
       if (indicatedSegment.text == ('두더지잡기')) {
-        window.open("../두더지잡기/index.html", "a", "width = 800,height = 800 , left = 550 , top = 100");
-        self.close();
+        location.href = ("../두더지잡기/index.html");
       } else if (indicatedSegment.text == ('벽돌깨기')) {
-        window.open("../벽돌깨기/index.html", "a", "width = 700,height = 500 , left = 600, top = 100");
-        self.close();
+        location.href = ("../벽돌깨기/index.html");
       } else if (indicatedSegment.text == ('스네이크게임')) {
-        window.open("../스네이크/index.html", "a", "width = 800,height = 650, left = 550 , top = 100 ");
-        self.close();
+        location.href = ("../스네이크/index.html");
       } else {
-        window.open("../짝맞추기/index.html", "a", "width = 800,height = 700 , left = 550 , top = 100");
-        self.close();
+        location.href = ("../짝맞추기/index.html");
 
       }
     }

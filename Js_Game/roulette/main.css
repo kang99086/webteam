@@ -43,7 +43,7 @@ div.html5_logo
 /* Styles for the power selection controls */
 table.power
 {
-    background-color: #cccccc;
+    background-color:  white;
     cursor: pointer;
     border:1px solid #333333;
 }
@@ -53,8 +53,13 @@ table.power th
     background-color: white;
     cursor: default;
 }
+table.power td
+{
+    background-color: white;
+    cursor: default;
+}
 
-td.pw1
+/* td.pw1
 {
     background-color: rgb(128, 232, 82);
 }
@@ -67,7 +72,7 @@ td.pw2
 td.pw3
 {
     background: rgb(242, 65, 35);
-}
+} */
 
 /* Style applied to the spin button once a power has been selected */
 .clickable
