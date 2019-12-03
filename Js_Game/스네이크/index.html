@@ -1,13 +1,18 @@
 <html>
     <head>
-        <title>Snake Game</title>
+        <title>스네이크 게임</title>
         <style>
             canvas{
                 display: block;
                 margin: 0 auto;
             }
         </style>
+        <link rel="stylesheet" href="snake.css" />
     </head>
+    <body>
+      <div id="head"><h1>스네이크 게임</h1></div>
+      <div id="button"><input type=button id="button1" value="게임시작" style="WIDTH:300pt; HEIGHT: 80pt;"  onclick="startGame()" ></div>
+    </body>
     <canvas id="snake" width="608" height="608"></canvas>
     <script src="snake.js"></script>
 </html>

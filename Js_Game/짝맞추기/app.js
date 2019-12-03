@@ -9,6 +9,7 @@ var imageCards = [],
 
 function initialize() {
     statusArea = document.getElementById("status-area");
+    statusArea.style.fontSize = "30pt";
 
     imageCards = [
         "leafers-seed",
@@ -88,21 +89,24 @@ function checkIt() {
         }
     }
 }
+function startGame(){
+  document.getElementById("head").style.display ="none";
+  document.getElementById("button").style.display ="none";
+  initialize();
+  setInterval(function(){
+      statusArea.innerText = timeset + "초 남았습니다.";
+      if(timeset <1){
+        result = 0;
+        setTimeout(() => (alert("Fail")),50);
+        setTimeout(() => (location.href=("../roulette/index.html")),50);
 
-window.onload = initialize;
-setInterval(function(){
-    statusArea.innerText = timeset + "minutes";
-    if(timeset <1){
-      result = 0;
-      setTimeout(() => (alert("Fail")),50);
-      setTimeout(() => (location.href=("../roulette/index.html")),50);
-
-    }else{
-      timeset--;
-    }
-    if(checking == 10){
-      result = 1;
-      setTimeout(() => (alert("Pass")),50);
-      setTimeout(() => (location.href=("../roulette/index.html")),50);
-    }
-},1000);
+      }else{
+        timeset--;
+      }
+      if(checking == 10){
+        result = 1;
+        setTimeout(() => (alert("Pass")),50);
+        setTimeout(() => (location.href=("../roulette/index.html")),50);
+      }
+  },1000);
+}
