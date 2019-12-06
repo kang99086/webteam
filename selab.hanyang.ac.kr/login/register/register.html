@@ -32,7 +32,7 @@
 
 		<!-- <hr /> -->
 
-		<form id="signInForm" action="register.php" method="post">
+		<form id="signInForm" action="register.php" method="post" onsubmit="return check();">
 			<div class="signIn">
 
 				<div id="inputArea">
@@ -81,7 +81,7 @@
 						<h1 class="selHead"> Select your class </h1>
 						<div>
 							<span class="selWrap">
-								<select class="sel" name="selectedClass">
+								<select class="sel" id= "select" name="selectedClass">
 									<option value="" selected disabled hidden>Select yout class & Time</option>
 									<optgroup label="월 10:30~12:00 / 화 13:00 ~ 14:30">
 										<option value="A">-Class A</option>
@@ -111,14 +111,14 @@
 						</div>
 
 						<div id="selAns">
-							<label> <input type="text" name="ans" placeholder="Your own ans"></label>
+							<label> <input type="text" id="answer" name="ans" placeholder="Your own ans"></label>
 						</div>
 					</div>
 
 				</div>
 
 				<div class="btn">
-					<button type="submit" id="signUpBtn"> Sign Up </button>
+					<button type="submit" id="signUpBtn" > Sign Up </button>
 				</div>
 
 			</div>
