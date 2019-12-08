@@ -144,7 +144,7 @@ body {
 .selWrap {
   display: block;
   text-align: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .sel {
@@ -164,7 +164,7 @@ body {
 }
 
 #selAns input {
-  margin-top: -20px;
+  margin-top: 10px;
   width: 400px;
   height: 35px;
 }

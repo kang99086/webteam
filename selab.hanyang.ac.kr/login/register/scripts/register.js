@@ -14,16 +14,11 @@ const userStudentID = document.getElementById("user_Student_ID"),
 const errorColor = 'red',
   collectColor = 'green';
 
-var id_check = false;
-var ps_check = false;
-var pc_check = false;
-var na_check = false;
-var de_check = false;
-// const studentIdSpan = document.querySelector("#studentIdSpan"),
-//   pwSpan = document.querySelector("#pwSpan"),
-//   pwConfirmSpan = document.querySelector("#pwConfirmSpan"),
-//   nameSpan = document.querySelector("#"),
-//   deptSpan = document.querySelector("#deptSpan");
+let id_check = false,
+  pw_check = false,
+  pc_check = false,
+  name_check = false,
+  dept_check = false;
 
 const sel = document.querySelector(".sel");
 
@@ -89,18 +84,19 @@ function alertMSG(regex, userInform) {
     }
   }
 }
-function check(){
-  if(document.getElementById("answer").value != ''){
-    if(document.getElementById("select").value != ''){
-      if(id_check&&ps_check&&pc_check&&na_check&&de_check){
+
+function check() {
+  if (document.getElementById("selAnswer").value != '') {
+    if (document.getElementById("select").value != '') {
+      if (id_check && pw_check && pc_check && name_check && dept_check) {
         return true;
-      }else{
+      } else {
         return false;
       }
-    }else{
+    } else {
       return false;
     }
-  }else{
+  } else {
     return false;
   }
 }
