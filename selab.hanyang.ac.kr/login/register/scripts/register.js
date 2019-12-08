@@ -8,14 +8,14 @@ const //checkID = /^[a-zA-Z0-9]{6,20}$/,
 const userStudentID = document.getElementById("user_Student_ID"),
   userPW = document.getElementById("user_PW"),
   userPW_Confirm = document.getElementById("user_PW_Confirm"),
-  name = document.getElementById("name"),
-  dept = document.getElementById("dept");
+  name = document.getElementById("user_name"),
+  dept = document.getElementById("user_dept");
 
 const errorColor = 'red',
   collectColor = 'green';
 
 let id_check = false,
-  pw_check = false,
+  ps_check = false,
   pc_check = false,
   name_check = false,
   dept_check = false;
@@ -33,7 +33,7 @@ function alertMSG(regex, userInform) {
           errorSpan.innerText = "6~20자의 영문 대소문자, 숫자, 특수기호(~~)를 혼합해야합니다.";
           errorSpan.classList.add("errorVisible");
           errorSpan.style.color = errorColor;
-          ps_check = fasle;
+          ps_check = false;
           break;
         case "user_Student_ID":
           errorSpan.innerText = "학번 양식에 맞는 10자리의 숫자로 입력해주세요.";
@@ -41,16 +41,17 @@ function alertMSG(regex, userInform) {
           errorSpan.style.color = errorColor;
           id_check = false;
           break;
-        case "name":
+        case "user_name":
           errorSpan.innerText = "한글또는 영어만으로 입력해주세요.";
           errorSpan.classList.add("errorVisible");
           errorSpan.style.color = errorColor;
-          na_check = false;
-        case "dept":
+          name_check = false;
+          break;
+        case "user_dept":
           errorSpan.innerText = "띄어쓰기 없이 한글로만 입력해주세요.";
           errorSpan.classList.add("errorVisible");
           errorSpan.style.color = errorColor;
-          de_check = false;
+          dept_check = false;
           break;
       }
     } else {
@@ -60,12 +61,16 @@ function alertMSG(regex, userInform) {
       switch (userInform.getAttribute("id")) {
         case "user_PW":
           ps_check = true;
+          break;
         case "user_Student_ID":
           id_check = true;
-        case "name":
-          na_check = true;
-        case "dept":
-          de_check = true;
+          break;
+        case "user_name":
+          name_check = true;
+          break;
+        case "user_dept":
+          dept_check = true;
+          break;
       }
     }
   } else {
@@ -75,20 +80,66 @@ function alertMSG(regex, userInform) {
     switch (userInform.getAttribute("id")) {
       case "user_PW":
         ps_check = false;
+        break;
       case "user_Student_ID":
         id_check = false;
-      case "name":
-        na_check = false;
-      case "dept":
-        de_check = false;
+        break;
+      case "user_name":
+        name_check = false;
+        break;
+      case "user_dept":
+        dept_check = false;
+        break;
     }
   }
 }
 
+function alerts(){
+  if(check()){
+    return true;
+  }else{
+//     alert("양식에 맞게 입력해주세요.");
+//     return false;
+//   }
+// }
+    if(!id_check){
+      alert("ID를 입력해주세요.");
+      return false;
+    }else{
+      if(!ps_check){
+        alert("비밀번호를 입력해주세요.");
+        return false;
+      }else{
+        if(!pc_check){
+          alert("비밀번호가 일치해야 합니다.");
+          return false;
+        }else{
+          if(!name_check){
+            alert("이름을 입력해주세요.");
+            return false;
+          }else{
+            if(!dept_check){
+              alert("학과를 입력해주세요.");
+              return false;
+            }else{
+              if(document.getElementById("select").value == ''){
+                alert("반을 선택해주세요.");
+                return false;
+              }else{
+                alert("질문에 답변을 적어주세요.");
+                return false;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 function check() {
   if (document.getElementById("selAnswer").value != '') {
     if (document.getElementById("select").value != '') {
-      if (id_check && pw_check && pc_check && name_check && dept_check) {
+      if ((id_check) && (ps_check) && (pc_check) && (name_check) && (dept_check)) {
         return true;
       } else {
         return false;
