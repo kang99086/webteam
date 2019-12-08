@@ -34,7 +34,7 @@
 
     <!-- <hr /> -->
 
-    <form id="signInForm" action="register.php" method="post" onsubmit="return check();">
+    <form id="signInForm" action="register.php" method="post" onsubmit="return alerts();">
       <div class="signIn">
 
         <div id="inputArea">
@@ -65,7 +65,7 @@
 
           <div class="input_box">
             <label>
-              <input class="input_text" id="name" type="text" name="name" placeholder="Name">
+              <input class="input_text" id="user_name" type="text" name="name" placeholder="Name">
               <div id="nameIcon" class="input_icon"></div>
             </label>
             <span class="errorMSG" id="nameSpan"></span>
@@ -73,7 +73,7 @@
 
           <div class="input_box">
             <label>
-              <input class="input_text" id="dept" type="text" name="department" placeholder="Department">
+              <input class="input_text" id="user_dept" type="text" name="department" placeholder="Department">
               <div id="deptIcon" class="input_icon"></div>
             </label>
             <span class="errorMSG" id="deptSpan"></span>
@@ -113,7 +113,7 @@
             </div>
 
             <div id="selAns">
-              <label> <input type="text" id="selnswer" name="ans" placeholder="Your own ans"></label>
+              <label> <input type="text" id="selAnswer" name="ans" placeholder="Your own ans"></label>
             </div>
           </div>
 
