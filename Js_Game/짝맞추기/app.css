@@ -1,46 +1,60 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap&subset=korean');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-#container{
-    width: 700px;
-    margin: 50px auto;
-    text-align: center;
+/* 게임 시작화면 */
+body {
+  background-color: rgb(227, 67, 138);
+  overflow: hidden;
 }
 
-#game-area img{
-    width: 128px;
-    height: 128px;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+body, #titleWrap h1, #startWrap input {
+  padding: 0;
+  margin: 0;
 }
-h1 {
-    text-align: center;
-    font-size: 10rem;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-top: 20%;
+
+#titleWrap h1, #startWrap input {
+  font-family: 'jua', sans-serif;
 }
-#button{
-  margin-top: 3%;
+
+#titleWrap h1, #startWrap {
   text-align: center;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    font-family: "Amatic SC", cursive;
-}
-html {
-    box-sizing: border-box;
-    font-size: 10px;
-    background: white;
+#titleWrap h1 {
+  padding-top: 250px;
+  font-size: 70pt;
 }
 
-#game-area{
+#startWrap input {
+  font-size: 40pt;
+  width: 270px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: rgb(255, 246, 0);
+  border: 2px solid black;
+}
+
+/* 게임 */
+#container {
+  width: 700px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#game-area img {
+  width: 128px;
+  height: 128px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#game-area {
   background-color: #DBA901;
 }

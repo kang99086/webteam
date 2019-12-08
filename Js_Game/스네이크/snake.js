@@ -161,7 +161,7 @@ function draw(){
 
 // call draw function every 100 ms
 function startGame(){
-  document.getElementById("head").style.display ="none";
-  document.getElementById("button").style.display ="none";
+  document.getElementById("titleWrap").style.display ="none";
+  document.getElementById("startWrap").style.display ="none";
   let game = setInterval(draw,100);
 }

@@ -90,8 +90,8 @@ function checkIt() {
     }
 }
 function startGame(){
-  document.getElementById("head").style.display ="none";
-  document.getElementById("button").style.display ="none";
+  document.getElementById("titleWrap").style.display ="none";
+  document.getElementById("startWrap").style.display ="none";
   initialize();
   setInterval(function(){
       statusArea.innerText = timeset + "초 남았습니다.";

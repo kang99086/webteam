@@ -1,79 +1,109 @@
-html {
-    box-sizing: border-box;
-    font-size: 10px;
-    background: #ffc600;
-}
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap&subset=korean');
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
-#button{
-  margin-top: 3%;
+
+/* 게임 시작화면 */
+body {
+  background-color: rgb(246, 191, 18);
+  overflow: hidden;
+}
+
+body, #titleWrap h1, #startWrap input {
+  padding: 0;
+  margin: 0;
+}
+
+#titleWrap h1, #startWrap input {
+  font-family: 'jua', sans-serif;
+}
+
+#titleWrap h1, #startWrap {
   text-align: center;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    font-family: "Amatic SC", cursive;
+#titleWrap h1 {
+  padding-top: 250px;
+  font-size: 70pt;
 }
 
-h1 {
-    text-align: center;
-    font-size: 10rem;
-    line-height: 1;
-    margin-bottom: 0;
+#startWrap input {
+  font-size: 40pt;
+  width: 270px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: rgb(255, 246, 0);
+  border: 2px solid black;
 }
 
-#head{
-  margin-top: 20%;
+#miniMole img{
+  width: 40px;
+  height: : 55px;
 }
 
-#score {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0 3rem;
-    line-height: 1;
-    border-radius: 1rem;
+/* #miniMole{
+  display: block;
+  position: relative;
+  top: 60px;
+  z-index: -100;
+  transition: 1s all;
 }
+
+#startWrap:hover #miniMole{
+  top: 0;
+} */
+
+#scoreWrap{
+  text-align: center;
+  display: none;
+  padding-top: 100px;
+}
+
+#score{
+  font-size: 30pt;
+}
+
+/* 게임 */
 
 .game {
-    width: 600px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .hole {
-    flex: 1 0 33.33%;
-    overflow: hidden;
-    position: relative;
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
 }
 
 .hole:after {
-    display: block;
-    background: url(dirt.svg) bottom center no-repeat;
-    background-size: contain;
-    content: "";
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    z-index: 2;
-    bottom: -30px;
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
 }
 
 .mole {
-    background: url("mole.svg") bottom center no-repeat;
-    background-size: 60%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
+  background: url("mole.svg") bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
 }
 
 .hole.up .mole {
-    top: 0;
+  top: 0;
 }

@@ -178,8 +178,8 @@ function draw(){
   }
 }
 function startGame(){
-  document.getElementById("head").style.display ="none";
-  document.getElementById("button").style.display ="none";
+  document.getElementById("titleWrap").style.display ="none";
+  document.getElementById("startWrap").style.display ="none";
   document.getElementById("myCanvas").style.visibility ="visible";
   startBtn = true;
 }

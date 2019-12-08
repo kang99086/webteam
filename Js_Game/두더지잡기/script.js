@@ -46,11 +46,11 @@ function check(){
   }
 }
 function startGame() {
-  document.getElementById("head").style.marginTop = "0%";
-  document.getElementById("button").style.display ="none";
-  document.getElementById("score").style.visibility = "visible";
+  document.getElementById("titleWrap").style.display = "none";
+  document.getElementById("startWrap").style.display ="none";
+  document.getElementById("scoreWrap").style.display = "block";
   document.getElementById("games").style.visibility = "visible";
-  scoreBoard.textContent = 0;
+  scoreBoard.textContent = 'score: '+ 0;
   timeUp = false;
   score = 0;
   peep();
@@ -76,7 +76,7 @@ function bonk(e) {
     mole.parentNode.classList.remove("up");
   }
   mole.parentNode.classList.remove("up");
-  scoreBoard.textContent = score;
+  scoreBoard.textContent = 'score: ' + score;
 }
 
 moles.forEach(mole => mole.addEventListener("click", bonk));

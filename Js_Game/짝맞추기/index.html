@@ -2,20 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>JavaScript Memory Game</title>
-    <link rel="stylesheet" href="app.css" />
+  <meta charset="UTF-8" />
+  <title>카드짝맞추기</title>
+  <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
-    <div id="container">
-        <div id="game-area"></div>
-        <p id="status-area"></p>
-    </div>
-    <div id="head"><h1>카드짝맞추기 게임</h1></div>
-    <div id="button"><input type=button id="button1" value="게임시작" style="WIDTH:300pt; HEIGHT: 80pt;"  onclick="startGame()" ></div>
+  <div id="titleWrap">
+    <h1>카드짝맞추기</h1>
+  </div>
+  <div id="startWrap"><input type=button value="게임시작" onclick="startGame()"></div>
+  <div id="container">
+    <div id="game-area"></div>
+    <p id="status-area"></p>
+  </div>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

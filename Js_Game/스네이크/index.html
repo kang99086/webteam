@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>스네이크 게임</title>
+        <title>스네이크</title>
         <style>
             canvas{
                 display: block;
@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="snake.css" />
     </head>
     <body>
-      <div id="head"><h1>스네이크 게임</h1></div>
-      <div id="button"><input type=button id="button1" value="게임시작" style="WIDTH:300pt; HEIGHT: 80pt;"  onclick="startGame()" ></div>
+      <div id="titleWrap">
+        <h1>스네이크</h1>
+      </div>
+      <div id="startWrap"><input type=button value="게임시작" onclick="startGame()"></div>
     </body>
     <canvas id="snake" width="608" height="608"></canvas>
     <script src="snake.js"></script>
