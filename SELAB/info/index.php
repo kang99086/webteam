@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="../common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css">
 	<link rel="stylesheet" href="../common/styles/common.css" type="text/css">
 	<link rel="shortcut icon" href="../common/images/SelabFavicon.png" type="image/png">
-	<link rel="stylesheet" href="styles/students_info.css" type="text/css">
+	<link rel="stylesheet" href="styles/studentsInfo.css" type="text/css">
 
 	<script type="text/javascript" src="../common/scripts/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../common/scripts/jquery-ui.js"></script>
