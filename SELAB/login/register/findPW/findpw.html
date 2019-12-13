@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Find user password</title>
+  <!--[if IE]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../common/styles/reset-1.6.1.css" type="text/css" />
+  <link rel="stylesheet" href="../../../common/styles/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="../../../common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../common/styles/common.css" type="text/css" />
+  <link rel="shortcut icon" href="../../../common/images/SelabFavicon.png" type="image/png">
+      <link rel="stylesheet" href="styles/findpw.css">
+
+  <script type="text/javascript" src="../../../common/scripts/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="../../../common/scripts/jquery-ui.js"></script>
+  <script type="text/javascript" src="../../../common/scripts/buffered-keyup.js"></script>
+  <script type="text/javascript" src="../../../common/scripts/common.js"></script>
+</head>
+
+<body>
+
+  <header role="banner">
+    <div class="container">
+      <nav role="navigation">
+        <div id="logo" class="pull-left"><a href="index.html"><img src="../../../common/images/selab_logo_S.png" /></a></div>
+        <ul id="menu" class="inline-list pull-left">
+          <li class="pull-left"><a href="notice/index.html">NOTICE</a></li>
+          <li class="pull-left"><a href="members/index.html">MEMBERS</a></li>
+          <li class="pull-left"><a href="research/index.html">RESEARCH</a></li>
+          <li class="pull-left"><a href="publications/index.html">PUBLICATIONS</a></li>
+          <li class="pull-left"><a href="courses/index.html">COURSES</a></li>
+          <li class="pull-left"><a href="gallery/index.html">GALLERY</a></li>
+        </ul>
+        <div role="login" class="pull-right">
+          <a href="#">LOGIN</a>
+        </div>
+        <a id="contact" href="contact/index.html" class='pull-right'>CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="container">
+
+    <div>
+      <header>
+        <h1 id="findPwHead">Find password</h1>
+      </header>
+    </div>
+    <form id="findPwForm" action="findpw.php" method="post">
+      <div id="findPwWrap">
+        <div id="idInput">
+          <input type="text" name="id" placeholder="Student ID">
+        </div>
+        <div class="selClass">
+          <h1 id="selHead">Security Question</h1>
+          <div>
+            <span id="selWrap">
+              <select id="sel" name="selectedQustion">
+                <option value="1">처음 배운 요리는 무엇입니까?</option>
+                <option value="2">꿈의 직업은 무엇입니까?</option>
+                <option value="3">어린 시절은 보낸 동네 이름은 무엇입니까?</option>
+                <option value="4">가장 좋아하는 가수의 이름은 무엇입니까?</option>
+              </select>
+            </span>
+          </div>
+
+          <div id="selAns">
+            <label> <input type="text" name="ans" placeholder="Your own ans"></label>
+          </div>
+
+          <div>
+            <button id="findBtn" type="submit" name="button">Go to change PW!</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

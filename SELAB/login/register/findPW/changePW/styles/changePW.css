@@ -1,0 +1,71 @@
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+  font-family: "Roboto", "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+#changePwForm {
+  width: 650px;
+}
+
+#changePwHead {
+  font-size: 25pt;
+  padding-bottom: 20px;
+}
+
+#changePwWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(178, 178, 190, 0.7);
+  background: none;
+  height: 230px;
+}
+
+#newPW {
+  margin-top: 20px;
+}
+
+#newPW input, #newPWcheck input {
+  width: 250px;
+  padding: 5px;
+  font-size: 15pt;
+  margin-bottom: 30px;
+}
+
+#selHead {
+  padding-bottom: 10px;
+  font-size: 15pt;
+}
+
+#sel {
+  width: 260px;
+  height: 30px;
+  font-size: 12pt;
+}
+
+#resetBtn {
+  width: 200px;
+  height: 30px;
+  font-size: 15pt;
+  margin: 20px 0;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #c9c6c6;
+}
+
+#resetBtn:hover {
+  background-color: rgb(184, 181, 181);
+}

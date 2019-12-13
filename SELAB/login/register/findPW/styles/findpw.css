@@ -1,0 +1,142 @@
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+  font-family: "Roboto", "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+#findPwForm {
+  width: 650px;
+}
+
+#findPwHead {
+  font-size: 25pt;
+  padding-bottom: 20px;
+}
+
+#findPwWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(178, 178, 190, 0.7);
+  background: none;
+  height: 280px;
+}
+
+#idInput input {
+  width: 246px;
+  padding: 5px;
+  font-size: 15pt;
+  margin-bottom: 30px;
+}
+
+#selHead {
+  padding-bottom: 10px;
+  font-size: 15pt;
+}
+
+#sel {
+  width: 260px;
+  height: 30px;
+  font-size: 12pt;
+  margin-bottom: 20px;
+  text-align-last: center;
+}
+
+#selAns input[type="text"] {
+  width: 246px;
+  padding: 5px;
+  font-size: 15pt;
+}
+
+#findBtn {
+  width: 260px;
+  padding: 0;
+  height: 30px;
+  font-size: 15pt;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #c9c6c6;
+}
+
+#findBtn:hover {
+  background-color: rgb(184, 181, 181);
+}
+
+/* Navigation Bar */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+}
+
+header[role="banner"] {
+  height: 52px;
+  width: 1145px;
+  margin: 0 auto;
+  line-height: 52px;
+}
+
+nav {
+  width: 1145px;
+  height: 52px;
+  z-index: 1;
+  position: absolute;
+  background-color: #00abd9;
+  border-radius: 0px 0px 5px 5px;
+}
+
+header[role="banner"] #menu li a, header[role="banner"] div[role="login"] a, nav a {
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  display: block;
+}
+
+header[role="banner"] #menu li a:hover, header[role="banner"] #menu li a.selected, #contact:hover, .selected {
+  background-color: #70c8e9;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.inline-list>li {
+  display: inline-block;
+}
+
+#logo a {
+  height: 52px;
+  margin-left: 10px;
+}
+
+#logo a img {
+  width: 100px;
+  margin-top: 9px;
+}

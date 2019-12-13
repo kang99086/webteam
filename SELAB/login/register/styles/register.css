@@ -1,0 +1,192 @@
+input{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#selab-header {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#logo {
+  vertical-align: middle;
+}
+
+#selab-header {
+  text-align: center;
+  width: 650px;
+  padding-top: 70px;
+  padding-bottom: 15px;
+}
+
+#signInForm {
+  width: 650px;
+  padding-bottom: 50px;
+}
+
+#inputArea {
+  height: auto;
+}
+
+.signIn {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input_box {
+  width: 402px;
+  height: auto;
+  margin: 0px auto;
+  padding-bottom: 20px;
+}
+
+.input_icon {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  width: 43px;
+  height: 43px;
+  float: left;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid #92ceec;
+  border-bottom: 1px solid #92ceec;
+  border-left: 1px solid #92ceec;
+}
+
+#userStudentIdIcon {
+  background-image: url("../img/student_id.png");
+}
+
+#user_Student_ID:focus+#userStudentIdIcon {
+  background-image: url("../img/student_id_focused.png");
+  transition: background-image 1s;
+}
+
+#userPwIcon, #userPwConfirmIcon {
+  background-image: url("../img/password.png");
+}
+
+#user_PW:focus+#userPwIcon, #user_PW_Confirm:focus+#userPwConfirmIcon {
+  background-image: url("../img/password_focused.png");
+  transition: background-image 1s;
+}
+
+#nameIcon {
+  background-image: url("../img/name.png");
+}
+
+#name:focus+#nameIcon {
+  background-image: url("../img/name_focused.png");
+  transition: background-image 1s;
+}
+
+#deptIcon {
+  background-image: url("../img/department.png");
+}
+
+#dept:focus+#deptIcon {
+  background-image: url("../img/department_focused.png");
+  transition: background-image 1s;
+}
+
+.input_text {
+  width: 357px;
+  height: 43px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: white;
+  border-top: 1px solid #92ceec;
+  border-bottom: 1px solid #92ceec;
+  border-right: 1px solid #92ceec;
+}
+
+.errorMSG {
+  display: none;
+  font-size: 10pt;
+  margin: 5px 0 -2px;
+  color: rgb(255, 24, 0);
+}
+
+.errorVisible {
+  display: block;
+}
+
+.selHead {
+  padding: 10px 0;
+  text-align: center;
+  /* text-shadow: 0 0 10px #92ceec; */
+  color: #7a7a7a;
+  font-size: 20pt;
+}
+
+.selWrap {
+  display: block;
+  text-align: center;
+  /* padding-bottom: 30px; */
+}
+
+.sel {
+  text-align-last: center;
+  font-size: 14pt;
+  width: 400px;
+}
+
+.selClass {
+  clear: both;
+}
+
+#selAns {
+  width: 400px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#selAns input {
+  margin-top: 10px;
+  width: 400px;
+  height: 35px;
+}
+
+div.btn {
+  text-align: center;
+  padding: 15px;
+}
+
+#signUpBtn {
+  display: block;
+  margin: 10px auto 10px auto;
+  color: white;
+  font-size: 20pt;
+  width: 400px;
+  height: 43px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #7a7a7a;
+}
+
+optgroup {
+  font-size: 12pt;
+}

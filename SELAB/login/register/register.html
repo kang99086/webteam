@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Selab Sign-Up</title>
+  <!--[if IE]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../../common/styles/reset-1.6.1.css" type="text/css" />
+  <link rel="stylesheet" href="../../common/styles/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="../../common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../common/styles/common.css" type="text/css" />
+  <link rel="shortcut icon" href="../../common/images/SelabFavicon.png" type="image/png">
+  <link rel="stylesheet" href="styles/register.css">
+
+  <script type="text/javascript" src="../../common/scripts/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="../../common/scripts/jquery-ui.js"></script>
+  <script type="text/javascript" src="../../common/scripts/buffered-keyup.js"></script>
+  <script type="text/javascript" src="../../common/scripts/common.js"></script>
+  <!-- <script type="text/javascript" src="scripts/register.js"></script> -->
+
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="selab-header">
+      <div id="selab">
+        <img id="logo" src="img/selab_logo_S2.png" alt="">
+      </div>
+    </header>
+
+    <!-- <hr /> -->
+
+    <form id="signInForm" action="register.php" method="post" onsubmit="return alerts();">
+      <div class="signIn">
+
+        <div id="inputArea">
+
+          <div class="input_box">
+            <label>
+              <input class="input_text" id="user_Student_ID" type="text" name="ID" placeholder="student ID">
+              <div id="userStudentIdIcon" class="input_icon"></div>
+            </label>
+            <span class="errorMSG" id="studentIdSpan"></span>
+          </div>
+
+          <div class="input_box">
+            <label>
+              <input class="input_text" id="user_PW" type="password" name="password" placeholder="password">
+              <div id="userPwIcon" class="input_icon"></div>
+            </label>
+            <span class="errorMSG" id="pwSpan"></span>
+          </div>
+
+          <div class="input_box">
+            <label>
+              <input class="input_text" id="user_PW_Confirm" type="password" name="checkPassword" placeholder="password Check">
+              <div id="userPwConfirmIcon" class="input_icon"></div>
+            </label>
+            <span class="errorMSG" id="pwConfirmSpan"></span>
+          </div>
+
+          <div class="input_box">
+            <label>
+              <input class="input_text" id="user_name" type="text" name="name" placeholder="Name">
+              <div id="nameIcon" class="input_icon"></div>
+            </label>
+            <span class="errorMSG" id="nameSpan"></span>
+          </div>
+
+          <div class="input_box">
+            <label>
+              <input class="input_text" id="user_dept" type="text" name="department" placeholder="Department">
+              <div id="deptIcon" class="input_icon"></div>
+            </label>
+            <span class="errorMSG" id="deptSpan"></span>
+          </div>
+
+          <div class="selClass">
+            <h1 class="selHead"> Select your class </h1>
+            <div>
+              <span class="selWrap">
+                <select class="sel" id="select" name="selectedClass">
+                  <option value="" selected disabled hidden>Select yout class & Time</option>
+                  <optgroup label="월 10:30~12:00 / 화 13:00 ~ 14:30">
+                    <option value="A">-Class A</option>
+                  </optgroup>
+                  <optgroup label="수 10:30~12:00 / 목 13:00 ~ 14:30">
+                    <option value="B">-Class B</option>
+                  </optgroup>
+                  <optgroup label="목 10:30~12:00 / 금 13:00 ~ 14:30">
+                    <option value="C">-Class C</option>
+                  </optgroup>
+                </select>
+              </span>
+            </div>
+          </div>
+
+          <div class="selClass">
+            <h1 class="selHead">Security Question</h1>
+            <div clas>
+              <span class="selWrap">
+                <select class="sel" name="selectedQustion">
+                  <option value="1">처음 배운 요리는 무엇입니까?</option>
+                  <option value="2">꿈의 직업은 무엇입니까?</option>
+                  <option value="3">어린 시절은 보낸 동네 이름은 무엇입니까?</option>
+                  <option value="4">가장 좋아하는 가수의 이름은 무엇입니까?</option>
+                </select>
+              </span>
+            </div>
+
+            <div id="selAns">
+              <label> <input type="text" id="selAnswer" name="ans" placeholder="Your own ans"></label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="btn">
+          <button type="submit" id="signUpBtn"> Sign Up </button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <script src="scripts/register.js"></script>
+</body>
+
+</html>
