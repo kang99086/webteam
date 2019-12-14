@@ -10,12 +10,13 @@
 	<link rel="stylesheet" href="../common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css">
 	<link rel="stylesheet" href="../common/styles/common.css" type="text/css">
 	<link rel="shortcut icon" href="../common/images/SelabFavicon.png" type="image/png">
-	<link rel="stylesheet" href="styles/studentsInfo.css" type="text/css">
+	  <link rel="stylesheet" href="styles/studentsInfo.css" type="text/css">
 
 	<script type="text/javascript" src="../common/scripts/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../common/scripts/jquery-ui.js"></script>
 	<script type="text/javascript" src="../common/scripts/buffered-keyup.js"></script>
 	<script type="text/javascript" src="../common/scripts/common.js"></script>
+	  <script type="text/javascript" src="./scripts/studentsInfo.js"></script>
 
 </head>
 
@@ -50,13 +51,6 @@
 					<div class="deactive" data-type="CB">Class B</div>
 				</div>
 				<div id="studentTables">
-					<?php
-					include "../DB_Connect.php";
-					$db = connect();
-					$all_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id;";
-					$all_stt=$db->prepare($all_sql);
-					$all_stt->execute();
-					?>
 					<div id="hl"></div>
 				  <!-- 모든학생 출력 -->
 					<table class="ALL">
@@ -68,25 +62,26 @@
 								<th>Attendence</th>
 							</tr>
 							<?php
+							include "../DB_Connect.php";
+							$db = connect();
+							$all_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id;";
+							$all_stt=$db->prepare($all_sql);
+							$all_stt->execute();
+
 							foreach($all_stt as $all) {
-								$temp = $all['sum(attendance)']/$all['count(attendance)'] * 100
+								$temp = $all['sum(attendance)']/$all['count(attendance)'] * 100;
 								?>
 								<tr>
 									<td><?=$all['name']?></td>
 									<td><?=$all['id']?></td>
 									<td><?=$all['section']?></td>
-									<td><?=round($temp,2)?>%</th>
+									<td><?=round($temp,2)?>%</td>
 								</tr>
 							<?php } ?>
 						</tbody>
 					</table>
 					<!-- Class A학생들 출력 -->
 					<table class="display_none CA" style="display: none;">
-						<?php
-						$A_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id having section='A'";
-						$A_stt=$db->prepare($A_sql);
-						$A_stt->execute();
-						?>
 						<tbody>
 							<tr>
 								<th>Name</th>
@@ -95,14 +90,18 @@
 								<th>Attendence</th>
 							</tr>
 							<?php
+							$A_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id having section='A'";
+							$A_stt=$db->prepare($A_sql);
+							$A_stt->execute();
+
 							foreach($A_stt as $a) {
-								$temp = $a['sum(attendance)']/$a['count(attendance)'] * 100
+								$temp = $a['sum(attendance)']/$a['count(attendance)'] * 100;
 								?>
 								<tr>
 									<td><?=$a['name']?></td>
 									<td><?=$a['id']?></td>
 									<td><?=$a['section']?></td>
-									<td><?=round($temp,2)?>%</th>
+									<td><?=round($temp,2)?>%</td>
 								</tr>
 							<?php } ?>
 						</tbody>
@@ -110,11 +109,6 @@
 
           <!-- Class B학생들 출력 -->
 					<table class="display_none CB" style="display: none;">
-						<?php
-						$B_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id having section='B'";
-						$B_stt=$db->prepare($B_sql);
-						$B_stt->execute();
-						?>
 						<tbody>
 							<tr>
 								<th>Name</th>
@@ -123,14 +117,18 @@
 								<th>Attendence</th>
 							</tr>
 							<?php
+							$B_sql = "select name,id,section,count(attendance),sum(attendance) from students natural join attendance_check group by id having section='B'";
+							$B_stt=$db->prepare($B_sql);
+							$B_stt->execute();
+
 							foreach($B_stt as $b) {
-								$temp = $b['sum(attendance)']/$b['count(attendance)'] * 100
+								$temp = $b['sum(attendance)']/$b['count(attendance)'] * 100;
 								?>
 								<tr>
 									<td><?=$b['name']?></td>
 									<td><?=$b['id']?></td>
 									<td><?=$b['section']?></td>
-									<td><?=round($temp,2)?>%</th>
+									<td><?=round($temp,2)?>%</td>
 								</tr>
 							<?php } ?>
 						</tbody>

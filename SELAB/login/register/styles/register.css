@@ -8,7 +8,6 @@ input{
 body {
   background-color: #f2f2f2;
   height: 100%;
-  font-family: 'Noto Sans KR', sans-serif;
 }
 
 #wrapper {
@@ -189,4 +188,12 @@ div.btn {
 
 optgroup {
   font-size: 12pt;
+}
+
+.errorColor{
+  color: red;
+}
+
+.colletColor{
+  color: green;
 }
