@@ -59,7 +59,8 @@
 								<th>Name</th>
 								<th>Id</th>
 								<th>Class</th>
-								<th>Attendence</th>
+								<th>Attendance</th>
+								<th>수정</th>
 							</tr>
 							<?php
 							include "../DB_Connect.php";
@@ -69,6 +70,7 @@
 							$all_stt->execute();
 
 							foreach($all_stt as $all) {
+								$id = $all['id'];
 								$temp = $all['sum(attendance)']/$all['count(attendance)'] * 100;
 								?>
 								<tr>
@@ -76,7 +78,19 @@
 									<td><?=$all['id']?></td>
 									<td><?=$all['section']?></td>
 									<td><?=round($temp,2)?>%</td>
+									<td>
+									<?php
+									$at_sql = "select attendance_day,attendance_time,attendance from attendance_check where id = $id";
+									$at_stt=$db->prepare($at_sql);
+									$at_stt->execute();
+									foreach($at_stt as $att) {
+									?>
+									출석날자:<?=$att['attendance_day']?>출석시간:<?=$att['attendance_time']?>출석여부:<?=$att['attendance']?>
+									<br \>
+								<?php } ?>
+									</td>
 								</tr>
+
 							<?php } ?>
 						</tbody>
 					</table>
