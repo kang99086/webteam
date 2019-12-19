@@ -82,10 +82,18 @@ tr>th:first-child, tr>td:first-child {
 */
 
 tr>th:first-child, tr>td:first-child {
-	text-align: center;
+	/* text-align: center; */
 	font-size: 15px;
 	color: rgb(105, 105, 105);
 	font-weight: 300;
+}
+
+.table>tbody>tr>td.active {
+    background-color: rgb(216, 216, 218);
+}
+
+td.number {
+    text-align: center;
 }
 
 #slides td.title, #problems td.title {
