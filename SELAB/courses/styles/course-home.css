@@ -11,14 +11,15 @@
     color: rgb(255, 103, 103);
 }
 
-
+/* 수정했읍니다. css가 깨진다면 여길 의심해보세요 */
 #main .wrap-subcontent{
     background-color: white;
-
     overflow: hidden;
     margin-bottom: 30px;
+    width : 100% !important;
+    flaot: left;
 }
-
+/*  */
 h1{
     margin-bottom: 15px !important;
 }
