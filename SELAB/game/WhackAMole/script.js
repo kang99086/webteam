@@ -34,10 +34,6 @@ function peep() {
   }, time);
 }
 
-function check(){
-  alert("Your score is " + score);
-  location.href = "../../index.html";
-}
 function startGame() {
   document.getElementById("titleWrap").style.display = "none";
   document.getElementById("startWrap").style.display ="none";
@@ -48,9 +44,8 @@ function startGame() {
   score = 0;
   peep();
   setTimeout(() => (timeUp = true), 15000);
-  setTimeout(() => (alert("Your score is " + score)), 15400);
-  setTimeout(()=> (check()),15500);
-  setTimeout(() => (self.close()), 15600);
+  setTimeout(() => (alert("Your score is " + score)), 15000);
+  setTimeout(()=> (window.history.back(),15000);
 }
 
 function time(){

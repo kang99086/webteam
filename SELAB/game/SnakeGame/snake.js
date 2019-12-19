@@ -148,7 +148,7 @@ function draw(){
 
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         setTimeout(() => (alert(snake.length-1 + "개 먹었습니다.")), 50);
-        setTimeout(() => (location.href = "../../index.html"), 50);
+        setTimeout(() => (window.history.back()), 50);
         // setTimeout(() => (self.close()),100);
     }
 

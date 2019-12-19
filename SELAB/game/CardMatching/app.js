@@ -99,13 +99,13 @@ function startGame(){
       }
       if(timeset <10){
         setTimeout(() => (alert("Fail")),50);
-        location.href = "../../index.html";
+        window.history.back();
       }else{
         timeset--;
       }
       if(checking == 10){
         alert((600.0-timeset)/10+"초 걸렸습니다.")
-        location.href = "../../index.html";
+        window.history.back();
       }
   },100);
 }

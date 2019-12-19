@@ -83,7 +83,7 @@ function collisionDetection(){
           score++;
           if(score == brickRowCount*brickColumnCount) {
             alert(timerecord/10 + "초 걸렸습니다.");
-            location.href = "../../index.html";
+            window.history.back();
           }
         }
       }
@@ -155,7 +155,7 @@ function draw(){
         if(!lives){
           clearInterval(intervalId);
           alert("Fail");
-          location.href = "../../index.html";
+          window.history.back();
         }
         else {
           x = canvas.width/2;
