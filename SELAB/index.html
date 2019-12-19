@@ -105,20 +105,30 @@
 	</style>
 
 	<script>
-		function openNav() {
-			document.getElementById('mysidenav').style.width = '15%';
-		}
+   function vis(){
+      document.getElementById("myside").style.visibility = "visible";
+   }
+      function openNav() {
+         document.getElementById('mysidenav').style.width = '15%';
+         setTimeout(()=> (vis()),300);
+      }
 
-		function closeNav() {
-			document.getElementById('mysidenav').style.width = '0';
-		}
-	</script>
+      function closeNav() {
+         document.getElementById("myside").style.visibility = "hidden";
+         document.getElementById('mysidenav').style.width = '0';
+      }
+      window.onload = function(){
+         document.getElementById("myside").style.visibility = "hidden";
+      }
+   </script>
 	<div id="mysidenav" class="sidenav">
+		<div id="myside">
 		<a href="#" class="closebtn" onclick='closeNav()'>x</a>
 		<a href="game/SnakeGame/index.html">스네이크게임</a>
 		<a href="game/WhackAMole/index.html">두더지잡기</a>
 		<a href="game/BreakOut/index.html">벽돌깨기</a>
 		<a href="game/CardMatching/index.html">짝맞추기</a>
+	</div>
 	</div>
 
 	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i></span>
@@ -137,7 +147,7 @@
 					<li class="pull-left"><a href="gallery/index.html">GALLERY</a></li>
 				</ul>
 				<div role="login" class="pull-right">
-					<a href="login/index4e7d.html?source=/index.php">LOGIN</a>
+					<a href="login/login.html">LOGIN</a>
 				</div>
 				<a id="contact" href="contact/index.html" class='pull-right'>CONTACT</a>
 			</nav>
@@ -180,7 +190,5 @@
 		</div>
 	</footer>
 </body>
-
-<!— Mirrored from selab.hanyang.ac.kr/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Oct 2019 12:22:33 GMT —>
 
 </html>
