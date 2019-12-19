@@ -26,6 +26,7 @@ let right = new Audio();
 let left = new Audio();
 let down = new Audio();
 let result = 0;
+var able = 1;
 
 dead.src = "audio/dead.mp3";
 eat.src = "audio/eat.mp3";
@@ -62,18 +63,26 @@ document.addEventListener("keydown",direction);
 
 function direction(event){
     let key = event.keyCode;
-    if( key == 37 && d != "RIGHT"){
+    if( key == 37 && d != "RIGHT" && able == 1){
         left.play();
         d = "LEFT";
-    }else if(key == 38 && d != "DOWN"){
+        able = 0;
+        setTimeout(() => (able=1), 100);
+    }else if(key == 38 && d != "DOWN" && able == 1){
         d = "UP";
         up.play();
-    }else if(key == 39 && d != "LEFT"){
+        able = 0;
+        setTimeout(() => (able=1), 100);
+    }else if(key == 39 && d != "LEFT" && able == 1){
         d = "RIGHT";
         right.play();
-    }else if(key == 40 && d != "UP"){
+        able = 0;
+        setTimeout(() => (able=1), 100);
+    }else if(key == 40 && d != "UP" && able == 1){
         d = "DOWN";
         down.play();
+        able = 0;
+        setTimeout(() => (able=1), 100);
     }
 }
 
@@ -138,9 +147,8 @@ function draw(){
 
 
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
-        result = 0;
         setTimeout(() => (alert(snake.length-1 + "개 먹었습니다.")), 50);
-        location.href = "../../index.html";
+        setTimeout(() => (location.href = "../../index.html"), 50);
         // setTimeout(() => (self.close()),100);
     }
 
