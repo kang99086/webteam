@@ -1,29 +1,36 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 <!-- Mirrored from selab.hanyang.ac.kr/courses/cse326/2019/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Oct 2019 12:22:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<meta charset="utf-8" />
 	<title>Software Engineering Lab - Courses: Web Application Development</title>
 	<!--[if IE]>
 	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="../../../../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="../../../common/styles/reset-1.6.1.css" type="text/css" />
 	<link rel="stylesheet" href="../../../common/styles/jquery-ui.css" type="text/css" />
 	<link rel="stylesheet" href="../../../common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css" />
 	<link rel="stylesheet" href="../../../common/styles/common.css" type="text/css" />
 	<link rel="shortcut icon" href="../../../common/images/SelabFavicon.png" type="image/png">
-			<link rel="stylesheet" href="../../styles/course-home.css" type="text/css" />
-				<link rel="stylesheet" href="../../styles/course-slides.css" type="text/css" />
-		
+	<link rel="stylesheet" href="../../styles/course-home.css" type="text/css" />
+	<link rel="stylesheet" href="../../styles/course-slides.css" type="text/css" />
+	<link rel="stylesheet" href="../../styles/course-calendar.css" type="text/css" />
+
 	<script type="text/javascript" src="../../../common/scripts/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../../../common/scripts/jquery-ui.js"></script>
 	<script type="text/javascript" src="../../../common/scripts/buffered-keyup.js"></script>
 	<script type="text/javascript" src="../../../common/scripts/common.js"></script>
-			<script type="text/javascript" src="../../scripts/course-page.js"></script>
-		
+	<script type="text/javascript" src="../../scripts/course-page.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -40,7 +47,7 @@
 					<li class="pull-left"><a href="../../../gallery/index.html" >GALLERY</a></li>
 									</ul>
 							<div role="login" class="pull-right">
-											<a href="../../../login/index2c92.html?source=/courses/cse326/2019/index.php">LOGIN</a>            
+											<a href="../../../login/index2c92.html?source=/courses/cse326/2019/index.php">LOGIN</a>
 										</div>
 				<a id="contact" href="../../../contact/index.html" class='pull-right'>CONTACT</a>
 			</nav>
@@ -52,10 +59,67 @@
 			<div class="contents">
 				<h1>Web Application Development</h1>
 <div id="tab">
-  <div class="first-tab" data-tab="main">Home</div>
-  <div class="deactive last-tab" data-tab="slides">Slides</div>
+  	<div class="first-tab" data-tab="main">Home</div>
+  	<div class="deactive last-tab" data-tab="slides">Slides</div>
 </div>
 <div id="hl"></div>
+<?php require 'calendar.php'; ?>
+<article id="userinfo">
+	<section class="inner">
+		<table>
+			<caption>Student Information</caption>
+			<thead>
+				<tr>
+					<th>ID : </th>
+					<td><?php echo "아이디 값"?></td>
+				</tr>
+				<tr>
+					<th>Name : </th>
+					<td><?php echo "이름 값"?></td>
+				</tr>
+				<tr>
+					<th>Class : </th>
+					<td><?php echo "클래스 값"?></td>
+				</tr>
+				<tr>
+					<th>Attendance : </th>
+					<td><?php echo "출석 값"?></td>
+				</tr>
+		</table>
+	</section>
+	<div class="cover">
+		<div class="event">
+			<input class="textbox" type='text' name='events' placeholder='Input the Event.' id="event">
+			<button class="inputbox"type="submit" name="event" onclick="add_event()">Register</button>
+		</div>
+	</div>
+	<div class="cover2">
+		<div class="attendance">
+			<?php
+			// $a="disabled";
+			if($offset == 4) {
+				$starttime = strtotime("10:30:00");
+				$endtime = strtotime("12:00:00");
+
+			}
+			else if($offset ==5){
+				$starttime = strtotime("14:30:00");
+				$endtime = strtotime("16:00:00");
+			}
+			else {
+				$starttime = strtotime("00:00:00");
+				$endtime = strtotime("00:00:00");
+			}
+			$time = strtotime(date("H:i:s"));
+			if($starttime<$time && $time<$endtime) {
+				// $a="";
+			}
+			?>
+			<button class="chk_button" type="submit" name="attend" onclick="attend()" <?=$a?>>Attend</button>
+		</div>
+	</div>
+</article>
+
 <div id="main">
   <div class="wrap-subcontent">
     <h3>Course Objectives</h3>

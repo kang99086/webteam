@@ -1,0 +1,212 @@
+/* body{margin-top: 20px; } */
+.all {
+    border-width: 1;
+    border-color: #cccccc;
+    border-style: solid;
+}
+
+font {
+    font-family: 굴림체;
+    font-size: 12px;
+    color: #505050;
+}
+
+font.title {
+    font-family: 굴림체;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2579CF;
+}
+
+font.week {
+    font-family: 돋움, 돋움체;
+    color: #ffffff;
+    font-size: 8pt;
+    letter-spacing: -1;
+}
+
+font.holy {
+    font-family: tahoma;
+    font-size: 22px;
+    color: #FF6C21;
+}
+
+font.blue {
+    font-family: tahoma;
+    font-size: 22px;
+    color: #0000FF;
+}
+
+font.black {
+    font-family: tahoma;
+    font-size: 22px;
+    color: #000000;
+}
+
+font.sblue {
+    font-family: tahoma;
+    font-size: 14px;
+    color: blue;
+}
+
+font.green {
+    font-family: tahoma;
+    font-size: 14px;
+    color: green;
+}
+
+font.red {
+    font-family: tahoma;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+}
+
+
+font.gray {
+    font-family: tahoma;
+    font-size: 14px;
+    color: #8e8989;
+}
+
+.main {
+    float: left;
+    width: 70%;
+    border: 5px solid #ccc;
+    background-color: #fff;
+}
+
+.right {
+    float: right;
+    width: 20%;
+    background-color: #fff;
+    border: 5px solid #eee;
+}
+
+.active {
+    background-color: rgb(132, 137, 147);
+    border: solid black 2px;
+}
+
+.event_num {
+    font-family: tahoma;
+    font-size: 14px;
+    color: rgb(126, 12, 198);
+}
+
+.calendar {
+    margin-top : 10px;
+    margin-bottom : 10px;
+    float : left;
+    width : 50%;
+}
+
+#userinfo {
+    margin-top : 10px;
+    margin-bottom : 10px;
+    height : 483px;
+    float:left;
+    width : 50%;
+    border : 1px solid rgb(198, 197, 174);
+}
+
+.inner{
+    margin : 20px;
+    border : 1px solid rgb(198, 197, 174);
+    height : 50%;
+}
+
+caption {
+    font-size : 20px;
+    text-align : center;
+    padding : 20px;
+}
+
+.inner table {
+    width : 100%;
+}
+
+.inner th:first-child {
+    width : 30%;
+    text-align: center;
+    border : none;
+    padding : 10px;
+}
+
+.inner td{
+    width : 70%;
+    text-align : center;
+}
+
+.cover{
+    position: relative;
+    width : 50%;
+    float : left;
+    height : 45%;
+    margin : auto;
+}
+
+.cover .event {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    margin: -50px 0px 0px -100px;
+}
+
+.cover2{
+    position: relative;
+    width : 50%;
+    float : left;
+    height : 45%;
+    margin : auto;
+}
+
+.cover2 .attendance {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    margin : -75px 0 0 -62px;
+    font-size : 50px;
+}
+
+.textbox {
+    border : none;
+    height : 30px;
+    background-color: #f2f2f2;
+    border-bottom : double black;
+}
+
+.inputbox {
+    cursor: pointer;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    background: #cdc9ac;
+    border: none;
+    color: #0b0809;
+    border-radius: 10px;
+}
+
+.inputbox:hover{
+    background: #222020;
+    color: #ffffff;
+}
+
+.chk_button {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 40px;
+    background: #cdc9ac;
+    border: none;
+    color: #0b0809;
+    border-radius: 50%;
+}
+
+.chk_button:hover{
+    background: #222020;
+    color: #ffffff;
+}
+
+.attend {
+    background-color: rgb(7, 142, 29);
+}
