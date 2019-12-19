@@ -99,7 +99,7 @@ function startGame(){
       }
       if(timeset <10){
         setTimeout(() => (alert("Fail")),50);
-        window.history.back();
+        setTimeout(() => (window.history.back()),50);
       }else{
         timeset--;
       }

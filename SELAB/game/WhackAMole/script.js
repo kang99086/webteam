@@ -45,7 +45,7 @@ function startGame() {
   peep();
   setTimeout(() => (timeUp = true), 15000);
   setTimeout(() => (alert("Your score is " + score)), 15000);
-  setTimeout(()=> (window.history.back(),15000);
+  setTimeout(()=> (window.history.back()),15000);
 }
 
 function time(){
